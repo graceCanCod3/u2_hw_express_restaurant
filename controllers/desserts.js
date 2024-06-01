@@ -1,21 +1,24 @@
 const desserts = [
     {
-        name: "Tiramisu",
+        name: "Hot Tiramisu",
         type: "Italian",
         price: "$7.99",
-        gluten_free: false
+        gluten_free: false,
+        image: "https://i.imgur.com/Xx2jc3y.jpg"
       },
       {
         name: "Mochi Ice Cream",
         type: "Japanese",
         price: "$5.50",
-        gluten_free: true
+        gluten_free: true,
+        image: "https://i.imgur.com/xJeEXSG.jpg"
       },
       {
         name: "Churros",
         type: "Mexican",
         price: "$4.99",
-        gluten_free: false
+        gluten_free: false,
+        image: "https://i.imgur.com/K0UsmU1.jpg"
       }
   ];  
 
@@ -26,12 +29,6 @@ const getDesserts = (request, response) => {
 const getDessert = (request, response) => {
     response.send(desserts[request.params.id])
 }
-
-// const img = new Image('https://www.recipetineats.com/wp-content/uploads/2016/09/Creme-Brulee_8.jpg?resize=650,910'); // Create new img element
-// img.addEventListener("load", () => {
-//   // execute drawImage statements here
-// });
-// img.src = "myImage.png";
 
 module.exports = {
     getDesserts,
